@@ -19,7 +19,7 @@ function Grid({ sizeX, sizeY }) {
         setGrid(newGrid);
 
         // Debugging Statement: Grid generation, row/column changes
-        console.log('New Grid:', newGrid);
+        // console.log('New Grid:', newGrid);
 
         // Cell size calculator
         const calculatedCellSize = Math.min(
@@ -39,7 +39,7 @@ function Grid({ sizeX, sizeY }) {
         setGrid(newGrid);
         
         // Debugging Statement: Cell Click
-        console.log('Updated Grid with click:', newGrid);
+        // console.log('Updated Grid with click:', newGrid);
     };
 
     const gridWidth = cellSize * sizeX;
