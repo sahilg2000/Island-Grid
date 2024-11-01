@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Cell({  }) {
+function Cell({ size }) {
     // State variables
     const [color, setColor] = useState('blue');
     const [filled, setFilled] = useState(0);
@@ -25,8 +25,8 @@ function Cell({  }) {
         <div
             onClick={handleClick}
             style={{
-            width: '100%',
-            height: '100%',
+            width:  `${size}px`,
+            height: `${size}px`,
             backgroundColor: color,
             cursor: 'pointer',
             transition: 'background-color 0.3s',

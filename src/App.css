@@ -11,6 +11,7 @@
   align: center;
   display: grid;
   margin-bottom: 20px; /* Adds space between the grid and the dimension box */
+  border: 10px solid #ccc; 
   
 }
 
