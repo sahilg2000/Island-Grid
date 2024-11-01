@@ -4,18 +4,19 @@ import Cell from './Cell';
 
 function Grid({  }) {
     // Size State variable
-    const [size, setSize] = useState(4);
-
-    /* 
-    Size Handler 
-    */
+    const [sizeX, setSizeX] = useState(4);
+    const [sizeY, setSizeY] = useState(4);
 
     return (
-    <div className="grid">
-        <Cell/>
-        <Cell/>
-        <Cell/>
-        <Cell/>
+    <div 
+    className="grid"
+    style={{
+        gridTemplateColumns: `repeat(${sizeX}, 100px)`,
+        gridTemplateRows: `repeat(${sizeY}, 100px)`,
+        }}>
+            {Array.from({ length: sizeX * sizeY }).map((_, index) => (
+            <Cell key={index} />
+            ))}
     </div>
         
     );

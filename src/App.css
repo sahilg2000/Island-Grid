@@ -1,13 +1,17 @@
 .App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .grid {
   align: center;
   display: grid;
-  grid-template-columns: repeat(2, 100px); /* 2 columns */
-  grid-template-rows: repeat(2, 100px);    /* 2 rows */
+  margin-bottom: 20px; /* Adds space between the grid and the dimension box */
 }
 
+.dimension-box {
+  margin-top: 20px; /* Adds additional space above the dimension box */
+}
