@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../App.css'; 
 import Cell from './Cell';
 
-function Grid({  }) {
-    // Size State variable
-    const [sizeX, setSizeX] = useState(16);
-    const [sizeY, setSizeY] = useState(16);
+function Grid({ sizeX, sizeY }) {
     const [cellSize, setCellSize] = useState(100); // Initial cell size in pixels
     const maxGridSize = 500;    // Max grid size in pixels
     const maxCellSize = 100;    // Max cell size in pixels
