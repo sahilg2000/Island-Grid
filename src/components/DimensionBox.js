@@ -5,7 +5,11 @@ function DimensionBox({ }) {
 
     return (
     <div className="dimension-box">
-        <input/>
+        <input placeholder="X Dimensions"/>
+        
+        <div></div>
+
+        <input placeholder="Y Dimensions"/>
     </div>
     );
 }
