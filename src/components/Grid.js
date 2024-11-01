@@ -11,8 +11,10 @@ function Grid({  }) {
     <div 
     className="grid"
     style={{
-        gridTemplateColumns: `repeat(${sizeX}, 100px)`,
-        gridTemplateRows: `repeat(${sizeY}, 100px)`,
+        gridTemplateColumns: `repeat(${sizeX}, 1fr)`,
+        gridTemplateRows: `repeat(${sizeY}, 1fr)`,
+        width: '70vh',
+        height: '70vh',
         }}>
             {Array.from({ length: sizeX * sizeY }).map((_, index) => (
             <Cell key={index} />

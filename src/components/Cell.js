@@ -25,8 +25,8 @@ function Cell({  }) {
         <div
             onClick={handleClick}
             style={{
-            width: '100px',
-            height: '100px',
+            width: '100%',
+            height: '100%',
             backgroundColor: color,
             cursor: 'pointer',
             transition: 'background-color 0.3s',
