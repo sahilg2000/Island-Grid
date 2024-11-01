@@ -7,14 +7,42 @@
   width: 100vw;
 }
 
-.grid {
-  align: center;
-  display: grid;
-  margin-bottom: 20px; /* Adds space between the grid and the dimension box */
-  border: 10px solid #ccc; 
-  
+.content-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.dimension-box {
-  margin-top: 20px;     /* Adds additional space above the dimension box */
+.grid {
+  display: grid;
+  border: 10px solid #ccc; 
+}
+
+.dimension {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;    /* Adds space between the X and Y input boxes */
+}
+
+.dimension input {
+  width: 100px; /* Adjust as needed */
+  padding: 5px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

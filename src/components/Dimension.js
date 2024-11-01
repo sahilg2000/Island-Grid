@@ -18,23 +18,29 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
 
     return (
     <div className="dimension">
-        <input 
-            placeholder="X Dimensions"
-            value={sizeX}
-            onChange={handleXChange}
-            type="number"
-            min="1"
-        />
+        <div className="input-group">
+            <label htmlFor="columns">Columns</label>
+            <input 
+                name="columns"
+                placeholder="16"
+                value={sizeX}
+                onChange={handleXChange}
+                type="number"
+                min="1"
+            />
+        </div>
         
-        <div></div>
-
-        <input 
-            placeholder="Y Dimensions"
-            value={sizeY}
-            onChange={handleYChange}
-            type="number"
-            min="1"
-        />
+        <div className="input-group">
+            <label htmlFor="rows">Rows</label> 
+            <input 
+                name="rows"
+                placeholder="16"
+                value={sizeY}
+                onChange={handleYChange}
+                type="number"
+                min="1"
+            />
+        </div>
     </div>
     );
 }
