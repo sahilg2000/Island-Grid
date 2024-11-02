@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import '../App.css'; 
 import Cell from './Cell';
 
-function Grid({ sizeX, sizeY }) {
+function Grid({ sizeX, sizeY, grid, setGrid }) {
     // Receives sizeX and sizeY from App.js
 
-    const [grid, setGrid] = useState([]);           // Grid, with all cells
     const [cellSize, setCellSize] = useState(100);  // Initial cell size in pixels
     const maxGridSize = 500;    // Max grid size in pixels
     const maxCellSize = 100;    // Max cell size in pixels
+
 
     useEffect(() => {
         // Create a new grid preserving existing values
@@ -30,6 +30,7 @@ function Grid({ sizeX, sizeY }) {
         setCellSize(calculatedCellSize);
     }, [sizeX, sizeY]);
 
+
     const handleCellClick = (rowIndex, colIndex) => {
         const newGrid = grid.map((row, r) => 
             row.map((cell, c) => 
@@ -42,8 +43,10 @@ function Grid({ sizeX, sizeY }) {
         // console.log('Updated Grid with click:', newGrid);
     };
 
+
     const gridWidth = cellSize * sizeX;
     const gridHeight = cellSize * sizeY;
+
 
     return (
     <div 

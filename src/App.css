@@ -5,6 +5,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: rgb(179, 222, 245);
 }
 
 .content-container {
@@ -16,20 +17,22 @@
 .grid {
   display: grid;
   border: 10px solid #ccc; 
+  position: static;
+  left: 30%;
+  right: 70%;
 }
 
 .dimension {
   display: flex;
+  position: fixed;
   flex-direction: column;
   gap: 10px;    /* Adds space between the X and Y input boxes */
-}
-
-.dimension input {
-  width: 100px; /* Adjust as needed */
-  padding: 5px;
+  bottom: 50%;
+  right: 15%;
 }
 
 .input-group {
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
