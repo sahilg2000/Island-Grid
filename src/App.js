@@ -27,7 +27,10 @@ function App() {
           setSizeX={setSizeX} 
           setSizeY={setSizeY}
         />
-        <div>Island Count: <IslandCount grid={grid}/></div>
+        <div>
+        <h2>Island Count:</h2>
+        <h1><IslandCount grid={grid}/></h1>
+        </div> 
       
       </div>
     </div>
