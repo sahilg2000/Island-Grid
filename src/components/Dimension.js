@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import '../App.css'
 
 function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
-    const handleXChange = (e) => {
-        const value = parseInt(e.target.value, 10);
-        if (!isNaN(value) && value > 0) {
-            setSizeX(value);
-        }
-    };
-
-    const handleYChange = (e) => {
-        const value = parseInt(e.target.value, 10);
-        if (!isNaN(value) && value > 0) {
-            setSizeY(value);
+    const handleDimensionChange = (setter, value) => {
+        const newValue = parseInt(value, 10);
+        if (!isNaN(newValue) && newValue > 0) {
+            setter(newValue);
         }
     };
 
@@ -24,7 +17,7 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
                 name="columns"
                 placeholder="16"
                 value={sizeX}
-                onChange={handleXChange}
+                onChange={(e) => handleDimensionChange(setSizeX, e.target.value)}
                 type="number"
                 min="1"
             />
@@ -36,7 +29,7 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
                 name="rows"
                 placeholder="16"
                 value={sizeY}
-                onChange={handleYChange}
+                onChange={(e) => handleDimensionChange(setSizeY, e.target.value)}
                 type="number"
                 min="1"
             />
