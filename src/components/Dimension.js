@@ -1,5 +1,6 @@
 import React from "react";
 import '../App.css'
+import { TbSquareRoundedPlus, TbSquareRoundedMinus } from "react-icons/tb";
 
 function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
     const handleDimensionChange = (setter, value) => {
@@ -12,7 +13,7 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
     return (
     <div className="dimension">
         <div className="input-group">
-            <label htmlFor="columns">Columns</label>
+            <label htmlFor="columns"> Columns </label>
             <input 
                 name="columns"
                 placeholder="16"
@@ -21,10 +22,14 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
                 type="number"
                 min="1"
             />
+            <div className="button-group">
+                <TbSquareRoundedPlus className="button" onClick={() => handleDimensionChange(setSizeX, sizeX + 1)} />
+                <TbSquareRoundedMinus className="button" onClick={() => handleDimensionChange(setSizeX, sizeX - 1)}/>
+            </div>
         </div>
         
         <div className="input-group">
-            <label htmlFor="rows">Rows</label> 
+            <label htmlFor="rows"> Rows </label> 
             <input 
                 name="rows"
                 placeholder="16"
@@ -33,6 +38,10 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
                 type="number"
                 min="1"
             />
+            <div className="button-group">
+                <TbSquareRoundedPlus className="button" onClick={() => handleDimensionChange(setSizeY, sizeY + 1)} />
+                <TbSquareRoundedMinus className="button" onClick={() => handleDimensionChange(setSizeY, sizeY - 1)}/>
+            </div>
         </div>
     </div>
     );
