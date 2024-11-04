@@ -4,7 +4,8 @@
   */
   --unit-background: rgba(30, 30, 30, 0.8);
   --app-background: rgb(101, 117, 145);
-  --text-color: rgb(255, 255, 255);
+  --text-color: rgb(235, 235, 235);
+  --highlight-color: rgb(255, 50, 0);
 
   /* 
     Constants (values)
@@ -73,7 +74,7 @@
 .dimension {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 33px;
   padding: 70px;
   background-color: var(--unit-background);
   border-radius: var(--border-radius);
@@ -81,8 +82,9 @@
 }
 
 .input-group {
-  width: 60%;
+  display: grid;
   gap: 10px;
+  width: 60%;
   align-items: center;
   text-align: center;
   color: var(--text-color);
@@ -101,7 +103,13 @@
   border-radius: var(--border-radius);
 }
 
-.button {
+.button-group {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.change-button {
   height: 50px;
   width: 50px;
 }
@@ -117,7 +125,45 @@
   color: var(--text-color);
 }
 
+.reset-button {
+  color: var(--highlight-color);
+  height: 50px;
+  width: 50px;
+  border-radius: var(--border-radius);
+  padding: 20px;
+}
 
+/*
+  Tutorial Button and overlay settings
+*/
+.tutorial-button {
+  width: 100%;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: var(--unit-background);
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: var(--text-color);
+  border-color: var(--highlight-color);
+}
+
+.highlight {
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
+}
+
+.tutorial-overlay {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
 
 /*
   Purely Cosmetic:

@@ -23,8 +23,8 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
                 min="1"
             />
             <div className="button-group">
-                <TbSquareRoundedPlus className="button" onClick={() => handleDimensionChange(setSizeX, sizeX + 1)} />
-                <TbSquareRoundedMinus className="button" onClick={() => handleDimensionChange(setSizeX, sizeX - 1)}/>
+                <TbSquareRoundedPlus className="change-button" onClick={() => handleDimensionChange(setSizeX, sizeX + 1)} />
+                <TbSquareRoundedMinus className="change-button" onClick={() => handleDimensionChange(setSizeX, sizeX - 1)}/>
             </div>
         </div>
         
@@ -39,8 +39,8 @@ function Dimension({ sizeX, sizeY, setSizeX, setSizeY }) {
                 min="1"
             />
             <div className="button-group">
-                <TbSquareRoundedPlus className="button" onClick={() => handleDimensionChange(setSizeY, sizeY + 1)} />
-                <TbSquareRoundedMinus className="button" onClick={() => handleDimensionChange(setSizeY, sizeY - 1)}/>
+                <TbSquareRoundedPlus className="change-button" onClick={() => handleDimensionChange(setSizeY, sizeY + 1)} />
+                <TbSquareRoundedMinus className="change-button" onClick={() => handleDimensionChange(setSizeY, sizeY - 1)}/>
             </div>
         </div>
     </div>
