@@ -20,7 +20,7 @@ The Island Counter will update as you make changes to the grid of islands or by 
 
 Download the application and run
 ### `npm install`
-in the app folder to install the required dependencies.
+in the **app folder** to install the required dependencies.
 
 ## Running the Application
 
